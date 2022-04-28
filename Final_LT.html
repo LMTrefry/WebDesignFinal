@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://www.w3spaces-preview.com/luketrefryspace/final.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Bootstrap 5 Example</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./Final_LT_files/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./Final_LT_files/mystyle.css">
+  <script src="./Final_LT_files/bootstrap.bundle.min.js.download"></script>
+  <script src="./Final_LT_files/jquery.min.js.download"></script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="">
+  ​
+  <div class="container-fluid p-5 bg-secondary text-white text-center">
+    <h1>Movie Reviews</h1>
+    <p>The place to go if you're interested in my thoughts on movies.</p> 
+  </div>
+
+  <div class="d-flex justify-content-center and text-center"> <!--- Do I separete the buttons into two groups? --->
+    <div class="btn-group">
+      
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Action</button>
+        <ul class="dropdown-menu" style="">
+          <li><button type="button" class="dropdown-item" id="fast" onclick="displayFast()">The Fast and The Furious</button></li>
+          <li><button type="button" class="dropdown-item" id="mad">Mad Max</button></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Adventure</button>
+        <ul class="dropdown-menu">
+          <li><button type="button" class="dropdown-item" id="indy_jones">Indiana Jones</button></li>
+          <li><button type="button" class="dropdown-item" id="zathura">Zathura</button></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Horror</button>
+        <ul class="dropdown-menu">
+          <li><button type="button" class="dropdown-item" id="excorcist">The Excorcist</button></li>
+          <li><button type="button" class="dropdown-item" id="conjuring">The Conjuring</button></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Drama</button>
+        <ul class="dropdown-menu">
+          <li><button type="button" class="dropdown-item" id="black_swan">Black Swan</button></li>
+          <li><button type="button" class="dropdown-item" id="girl-interrupted">Girl, Interrupted</button></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Comedy</button>
+        <ul class="dropdown-menu">
+          <li><button type="button" class="dropdown-item" id="dd1">Dumb and Dumber</button></li>
+          <li><button type="button" class="dropdown-item" id="dd2">Dumb and Dumber 2</button></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Thriller</button>
+        <ul class="dropdown-menu">
+          <li><button type="button" class="dropdown-item" id="the_inv_man">The Invisible Man</button></li>
+          <li><button type="button" class="dropdown-item" id="the_butter_effect">The Butterfly Effect</button></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Sci-Fi</button>
+        <ul class="dropdown-menu" style="">
+          <li><button type="button" class="dropdown-item" id="star_wars">Star Wars</button></li>
+          <li><button type="button" class="dropdown-item" onclick="displayFuture()" id="back_to_the_future">Back to the Future</button></li>
+        </ul>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Western</button>
+        <ul class="dropdown-menu">
+          <li><button type="button" class="dropdown-item" id="goodbad">The Good The Bad and The Ugly</button></li>
+          <li><button type="button" class="dropdown-item" id="henry">Old Henry</button></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+    
+  <div class="container-fluid mt-5 justify-content-center and text-center">
+    <div class="row">
+      <div class="col">
+        <div class="welcome">
+          <h3>Hello and Welcome!</h3>
+          <p>This is the website where I share my thoughts on different movies I've seen.</p>
+          <p>I hope you enjoy your stay!</p>
+          <a href="https://www.w3spaces-preview.com/luketrefryspace/final.html#main" class="skip">Skip to main content</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+      <div id="animation"></div>
+
+  <div class="container-fluid p-5 my-5 bg-dark text-white">
+    <h1 id="MovieTitle">Back to the future</h1>
+    <p id="MovieBlerb">A movie about time travel in the 80s</p>
+  </div>
+
+  <main id="main"></main>
+
+  <div class="poster">
+    <div class="poster_image">
+      <div class="container mt-3">           
+        <img src="./Final_LT_files/71BPuv+iRbL._AC_SY741_.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236" id="myposter"> 
+      </div>
+    </div>
+    <p id="MovieReview">I think this is a good movie. I've only seen it a few times, but the inclusion of good music and funny characters make it good. I don't really have much else to say other than yeah, I really do like this movie and that's that I hope you'reno too dissappointed with how short this review is haha. Really, you should probably go check another movie reviewer's reviews on this movie, it's probably way better than mine.</p>
+  </div>
+
+
+  <div class="actors">
+    <p>Actors:</p>
+    <div class="row justify-content-center">
+      <div class="col-sm-4" style="padding-top: 10px; width: auto;">
+        <div class="card flex-row-reverse" style="width:400px">
+          <img class="card-img-top" src="./Final_LT_files/Michael_J._Fox_as_Marty_McFly_in_Back_to_the_Future,_1985.jpg" alt="Card image" id="card1" style="width:50%">
+          <div class="card-body">
+            <h4 class="card-title" id="card-title1">Michael Fox</h4>
+            <p class="card-text" id="card-text1">Character: Marty McFly
+
+he was good in the 80s. I don't know how I feel about him now.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4" style="padding-top: 10px; width: auto;">
+        <div class="card flex-row-reverse" style="width:400px">
+          <img class="card-img-top" src="./Final_LT_files/Christopher_Lloyd_2015_(cropped).jpg" alt="Card image" id="card2" style="width:50%">
+          <div class="card-body">
+            <h4 class="card-title2">Actor 2</h4>
+            <p class="card-text2">Actor 2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4" style="padding-top: 10px; width: auto;">
+        <div class="card flex-row-reverse" style="width:400px">
+          <img class="card-img-top" src="./Final_LT_files/rs_600x600-190820081745-600x600-leathompson-gj-8-20-19.jpg" alt="Card image" id="card3" style="width:50%">
+          <div class="card-body">
+            <h4 class="card-title3">Actor 3</h4>
+            <p class="card-text3">Actor 3</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="col-sm-4" style="padding-top: 10px; width: auto;">
+      <div class="card flex-row-reverse" style="width:400px">
+        <img class="card-img-top" src="./Final_LT_files/Crispin_Glover_2012_Shankbone.JPG" alt="Card image" id="card4" style="width:50%">
+        <div class="card-body">
+            <h4 class="card-title4">Actor 4</h4>
+            <p class="card-text4">ACTOR 4</p>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function displayFast() {
+
+      const text = '{"vin": {"name": "Vin Diesel", "character": "Dom"}, "paul": {"name": "Paul Walekr", "character": "Brian"}}'
+      const obj = JSON.parse(text);
+
+      document.getElementById("MovieTitle").innerHTML = "The Fast and The Furious";
+      document.getElementById("MovieBlerb").innerHTML = "Lots of cars and explosions";
+
+      var image0 = document.getElementById('myposter');
+      image0.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQUExYUFBQWFxYYGRkYGhkZGSEZIRseGxsbGBsZGRkeHioiHh4nHBsZJDMkJy8tMDAwGCI2OzYvOiovMC0BCwsLDw4PHBERHC8oIicxMS8vLTkvLy8vODEvMi8vLy8xLzEvMS8vLy8vLy8vLy8vLzEvMS8vMS8vMS8vLy8vL//AABEIARsAsgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAMEBgcCAQj/xABDEAACAQIEAwUFBgQEBQUBAQABAhEAAwQSITEFQVEGEyJhcTKBkaGxFCNCUtHwBxViwYKS4fEzU3KTohdUssLTQxb/xAAbAQABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EADERAAICAQMDAgMHBAMAAAAAAAECAAMRBBIhBTFBE1EiYbEUUnGBkaHwFTLB0QZC4f/aAAwDAQACEQMRAD8A3GlSpUQipUqVEIqVKlRCeU1dvAU6KFcVciq+pt9JC0krXc2J7e4qFNePxtAOc1VsVeLNE15mrnrOsuvaaK6JT3kzi/GWbQaCq5fxQJjenOJgny15UDa6A0H3VnlmvY2McmXqqlQYEM4bENUhb55mg9rEsdhTt7ETFRtVkydQIROIHOmMRixUFnkCoxtsSJBiauUdOtcjCnn5Rr21IDlhx841j7jkypgch1oTh7pDEsZM86P4uFFAMWVOxkmvWdHWK6FT2AH6TkrH3uW9zHcTxsAaAHrVM4rxEMxOUUcxeBZVklQfSar+JC5xA9Z51cUADiII9huIRb0qPYsuwNzTXaenlTeKCRoIp7BqmUhiZjTXasjqOoDLsQ9u8cokrwdKVDNfzCvKxfUb3MfifYtKlSpkWKlSpUQipUqVEJ5QTjdzlRbEXMomqvxLG6msrql6pXsJ5MtaWss+YFvqwadIqRAiuLrh9Kaa5l0n41x5Bc4HebQ7cyNjbuYQOtB3wRdtI9ZoyOHu8sBHqYmobQhyzlbodJ9Ovuq+tFta52n9Iq2ITgERu1ZCrlnXnXK2wTFeX70CoyltTtW90TpL6iwW2D4fn5lPXaoIu1Tz9IQa5bQQT7q5bFoeYqpcQxhDGTI9aF3OMDbbpXoSaVQMCYBOZYOM8TVgQpqv2LpzCDruTQLGcSIJE86Z4fxI5iGOhB+NTgqmFjcGH8TxEmedCG8Rk+YHvpm3iAAZ50wl2XBGwnT5TTrGVV5jwJNXCkg9OtDrwcHSDU3FYxwAFG4oXcvPua5C1yzkyQCP52/KKVRPtJpVHFn2tSpUqIRUqVKiE8pE1W+1Xa+zgsqur3LjAkIkbDmxJAAnT+1ULiH8Xri6HDokg6Zy5jbdefqKYzYHEcqkzROJ47McooJiTQDs/wBtbGKOSCl38raz6Hr5UcuOa4bqL3PeTaCPYTY06KANsgNdgmBFO4Hh7XoYn08v9ah464fSrJwi4FUDpWj0mlCS57+I/VEqABK72i4QyqCGJ9+1Zpxi7cUkFmI5VsHHb8qdKyztJb5xrJrc7NxKWMrzOOBcce4Cj6usEE8xtr5g/WpPEcVdC7iqrwh8uIA65h/f+1TuI3yDJeY2rq+jVoKTt9zM/UMzNzI/EmYg661Wr1wg77UYuY3MrHpRjhHAUULcvQzuJykTlnZQDoWjedpiJq9rNQtKZMjRSeJSrlyTNe2nAMkSOlaBxDgFhwdFXoV/CBuSRE9ANt+lVbtDwLuCGQypAJncTMeo/WsqvqC2N85I1TLzI6HPG0DUefuqbasIgBaJPKhXDpLamp+NcbRtUWs1Duee0aIzjLoJkGoZutGlJkJ1rhreXZtaz46cfaT0pVz3fnSohPtmlSpUQipUqVEJSu0vZvDXcR399O8IVQAzHKInZdjprrNY12y4U9q/92oC3GIthdjOgHrJGnnWs9qOF4e9jRnuubiprbDxpAMACCAcu/nFBeKy15CbYS3bOYAwdFEyfp8aqs+Gl1E3IJj3EMHfwd60Sy5vDcQieTHnpMEeh5SK3YYolBcI0KhviJrKO12BuYi9bFtMqoqW0UkFiDJJaNAxZojy9a1u5eCWPEQciAN6gQfnWP1dBY1Yxk5wcd+cSbT5r3e3zgUYzvbiLl8JOuoWOc69N459RRn+ZW7Cq7kkMNMomecjyiqV/MCt3OyzbJ8S7EqdGHrBMVesN3F+3yuIZyMPLTTTcR8q3tT05dIqbFwCP38gmQpebc5PP+IGxnaazePd2GDuTBEGV0bUjlByk+Qqh9oeOWbpCqTEyQIBn8pZiADM9TWn9m+zSWrjv+IgxoBlBknYDckmsw+ynv8AE2mBVRcY9NCSdCPI/wDl51VwM5Mfz2ErK63VKiJJK6zy61C4i5zkSTABn3CizoDdUW9AgIBn11+JobxJAjaL5ya6Po9b7WfOF7SlcQDt8wcLxBn0kdY61e8LnuWr98uWyMyhAAASihmbQEiVnmNtZnSnYPCm4wEgAQSx2USBmaNYHQSTymtWwl6wpRbNxTYghmWD3rGWljuCWJ+JFR9WbCgZhp1yTAGDwl67aVwrKrfm18M8iORGk76k11jLBYNmEKEIK/0rOp/xa+7yq74LKytajwFYEEiByAI1FZ/2+4iwZLFtxkyQ66Fswc6XG9qYVdCeVYlZLNLNqhVlfOHVTp8eVRM3ihVzE/LzNFeGYQ3pk6KBUsIloEIAWgy39pq2TmUpAHC0RZuvmP5RoB+tB+Im2fZEemle4/Gs7QKjqBox36UkWRe7PnSqf9s/pFKiE+zK5JivLlwKCSYAqt8WxzMxCkhdPfpOtUdbrU0q5PJ8CS1VGw4EL/zAF8qwQB4jyHv+NMcR4moGVDJPMcvf1qs37xEwdxqOvOoN6+2/7Fc/Z1e61CqjBPn2+QmjXoBkEmSeJ482/vDdhV9rSfT8JJ9BFZ+3aXv7zG5mt2gJYuCCwAgKqnWTP96K8V7WW0lbbZ3+AHWTz91Uji/E3unPcM6wOgEkQByEitbpVN5rAtGAOxPf9JBqbkrOEOT+0L8T7RYYMptXYIZWJKMZykEAEA6SOn61IxnG++0S7mU6wJG/IggbdY5TVBxV8RMe+mMIriXUERGp0A863dMEos34z+P+JSe1nXBlu4leYaZhFXr+HGLDYdQT7NxwPjP1NZVeR3MM2o6c+h8q0H+G+VsLeRdWR88TqQ6Lr7yre9RV7qmrrt04Vc5yD+EXTLh+Zc8fjjbR2F7K5BOWUg6HKvi8+kak1k97EXVxFw3LgdmkGCCNYB2MToPhV3DtctO1t7J3B7zlG4IPOs/4szLdYsyz7IyARtrAHQfWufHPEvHjmMcOuKGYmNvqZ/sKH8QJunoY9wHMk9KYxtwLrsT4Y8iD9IHxpm7ix3eUHVmE+6K6XSauqrSbR/cM8fjM6wHeTH7DKgKgkg+1qRPuBpYbGJZZisnOIKkwPJpAkEHahPfQYNNuZP0rJsc2EloL8PaXle22WyytbzOR922hWR+JtiCPL+9Ux8W2YkkknUkmSSdSSetNZyVj3/v517YtTJnURoedRqgXtHs7N3h/gd0hWYneAPdTGIxTGVzb60wuM/DUTF4jxEinRkddQB1OtQQxOldW8zGBUvD4K5mBynrMaR50hYDuY0sq9zIXi6GlVrt9mb7ANmt6id+utKoftVP3hK/2yj7wn0bx3FEtlUkACDrofdQLOQPFz2POoWM4nKsWOSDr+onemcCjuwjM9tgBPIT1PT/SuL1DPe5sfzOqqpFSYMcS748padJBoJ244r3VgqD43OUR0iSR7oHvoxieHG2CxuiQGZhGgA1gHlAFVm52fv4y2t9762kILInMLqQ7bbgAwdue8C903Tq9osPKr9Y3VWZTCdzM8N8Dn5+a+oOsfv1JcE4Ficb3gtABVy+NjlQEnORMEkjoAd6j4rBXBdXDsyszMEVxzLMFBI5RMGt34HwxLNpLVsBUQQB9SepJ1J6mursvwBt8zFroyTu8TKeMdh3w1pboIuhB95pGTmWAJ1Xz3HpsCuKDpyIg+h0n1BIreOJlVRgQIIII8iNawTFJkvtbB0Rio81bRf8A5fKm1WFuG7x1tYXle0aW74Vuc1IVvSaKdmOLnCXxcJJtktbuAa+EnMDHMjQj3jnQqwshl/NmHvBMU1ZYsrD8RAI9V/UaVMQCMGQgkHIl87S8JVyL9ps1q74syHT1oHjezDWFFxmGuviOw3kmg/DuMX7KnuXIU7oRmEzvB2PpXPF+J374QXHzSfCo0Wesc/ftVYUsDjPEtG9SO3ME8VuZ3EaDZep/qPQUwtuGOpAG/nT2WXLcgQi+7n9T76ea0O8edgZjrHKpwMCVicnJjAwmfU+EnX0HKetRMRhWTcadaKA6KTzJJ9wmKNdlsNFq5iHidVGbYSRmY+/T/D50jMFGYqLuOIG4HhFlWuZjm0VFAJPKYP1+tWq/wLHKmb7Pae2J8EAsB6wI92tC+zvixBaRCOiKNgSc2WNCYhemmbXrWv2OLXGw4dMOZDG26yZWFDSAQCd4g5dagsdgeJYrrUg5mJ8Q4ar2hesez+NDukkj3iRHl1O9A8NgnuNlRSTVyxN0WMVcAUhWYMUYESl4BiCpGkabjrRnA4K0jEqAJMx002PlTbbzWm4DMo62w0IWUZxBXZ/hAtWwWQF2mZHLlRnvUtqdACeVe5Ga5qrRtOnz10ru/wAIQsGLGBup2+WtY7uXbcx7/wAxOXsu9R8ue/P/AJIoxq9K9qfntf0/5aVR/D7SHK/dMPcOyXhkupPWTHvgUbvcTSxbW2g1AhZ8ufWs64j2huYc62gw/Mpkbx8dRRbh3EhiVBfLmGwG8b711N//ABek6hXH9gOSuT+U7k652QhuT4Mm8Q4rmBV21YFdvzaf3ot2jw4sYeUAzogRQzNAAKksFVTrKqJIHrrrVMbwRLlzMHKkHxA6gj4z86O8fS+uHCWbw70lFYMAxhpy8iRoCNfy1P1HSUUopqUDPcAYiaaxmJDEmVTFWbbYy3fyeEXU6nxOc2bygpoOVavhsQIrDbeJvW73dO4a1auB7rAAeIEAkHTYDKAfOtR7P9qsNiXNq0zC4AWyuuUkcyOR+tZTVsADJ1sUkiEeLWHubGBtWRdqeDvh74YmVuZYbzVpIP8Ah29K2i48Vnv8SUm0W/KQ49xkx7ppK22uDHWLuQiUVxDH/qzfHeo2zEjrTpug686Yd6vzPnGKkMcuzww/uK6sghXun8KlUHQnc/WmsW5FoHmGIHvru46pZCMdT8fWkhE1rKlocyc1eY3Rz5qP38qdxLiVnTKg08/9oqDib2dpB/2oixGSUtrqxBHveR+lXPH2O6wncqQCFBJI31HzJNe/w44ALha+wnUhOcRoSPOjPajDRrMR9KqWWDeB7S1XWQhMq3YbiBsvmUSVZS5gbMGiD5n/AOIrWuyd1lVny3Stx3clnWAXM6KABGnUmsY4Svd4i1lYEXGW06kaEO2XUHQgGD5adKtY4pjFU2e8KoJhVHyDHUCm2jnIj6mwMEQT/ES+TjC6wTkAI8szRPv+FEOAXxctIxPiQnNJkwTtPOI+BHnVbwvBbjsbt24BJ8RklvhyBGnoasuHwaoi65Vj2f7yag1DqE2Z5mP1HVVlGTPJ4xDF/EgDRhQbifEcqhpknpQ7E8QQkhZI6zt/ahOKvM+pOg0H61Tq0/OWmHRo+QWkn+ZmlQzPSq56S+0v+gntC3C+K2gjF0DzIJaSddYA22510nF7JZRazJy5n03MxvVaxGGKaE+8bV3gMOWcAA5dMxHIczPpXfG0qfiH4zSxLzhOI3SUdozCIE8gRq3UHkOcHau8Pxy7bGIvkM9y9AVp9nKXRFRY9qSTOywTrNQsFaZiYVobKogaEiRC/EDTrXV0C2qZplV8KjXbwyTyJWT/AIjO1c9qrTe+W7eJLWdikyHd8NmWUAjYcpGhMtv0E+fuB9nca9vHWHUnMLyDQ7hmCsPepI99Lj3FXdiJUDkF6dK47N2D9osTu161HoHBJj0k+6qz9sQTvN/4thL7j7sqPUn9KqHH+zeKuWmUvZJIIHiYb/4KuGLxd4iLaT5kwBQd1uAzcYnymB8Kzu3M0+4xMwu9ksaojuQ4HNLin6kGoF3heIT2rF0Rv4CR8RIrUMVxdVP4frUG52iOwWYp/wBpYd8SratKf3NiZ3Zwdy41u2EuCbiychOUHw5tuUzWtcGxyi0Ew6hbQUauhSZE6lh4mI3Mk7zVcvceuZxqU1AzABss84YQY89Kj9peNgMO8uXWKoFCsMuo09mFGu+30pfVNnaJQ9bZKHMFdseHd9iCLSojkSYGUNG56T9ZqsYvB3LQhrbKObaGfUjQelWROI3jiLbBFBNtlVYEDOcxYzuxlif9KOYLhWIuKGICz+Y7j0ANP9QqPlJCgYn3lo/h5YC4G0eqA/HU0F7a4gGVQSYknYAdSToB5nrRThL3LFg2SyaTEHYGTEGOtBhdsi8guuJLPc1IM5AAqRAEkliPINyNRABmkjHYsG8D7NBLlq9iCI0uJb1E/lZ9ionUDcxqORt/BuHWzoZJYeI7iei6x8fLehjcSRn7y9dS3b3aWGwmFE7sSfmTpFV3tR22V7bWMNIV9Huajw80QHWDsWMaSI1mnbWc8do3cqDnvC+Ia3jsTZs2jlwyXCpZTBu5QSzSOWhC9ZLc/C5204dZQKllSGJgHOxDaaKQxOpMCZ561UuzHFe7bD7Qpc+slkk+mcirT2gvZkJOh5eVNtUbgMSA0papLDJ95QSpHkZFEmwHgksSYnQDSPrUPjSxczKCA4V/KXUOQP8ANTCXjtMaU1lJAIMx2RjjBkfvaVPfy5vyXP8AKf0rypcrLXpN90/oY1xO6GIZdjqQBEGi/ZuFQkwczaqd2VYMDlqdPd5VW5ojYxPgy5mBE5QICmTu53PPSPhXU6pmdWK+Y/EsWK7QKw8UqddDcjTQZQ0SNhoQRy6QI4hxUgTbFyN8zL/9ufrAnnNC7iqJfMCwMidyep/Sm7913GZmJ8uW07bVhljJAokYXdSx1PLp76P9mbLJdW/cZRGYrmOpPsz6DX4VX7S+IDeSK3fG2u9wgsm1YSzatrnBYsy5gxTLCgElQvoWOumsLtgSatNxldxXbNrS5AY98/Cq5je11xyfFQ7EWCqKl0g5hmQ81BJCg+oExT/BsCmVgw1IIJO+u0flqB9qrkxmo1JqXM8wmOZ2jxEnp8dqLYHBMPFmkHkfXb5U3gsELRzNltyAAGmTr7RETBBoth8WmwdSSTpBU6b6MB66TpVO/cclF4mLq2ufJVTiWbCdlxlQ3HhnAIBHhBYaK8GY2E9esGs64vwm6l9m7o5czA6BjIJnR8w0MjblpWsY7APcQd23hZFgHTMMo1U7Ex6ERyEznePZ1xYkkE3LmYnf8TSTt7K86u6dVUYAmpTUtaDaMSdY4BfuOrMyJYyzKtKkDctoFDdZ0EDSmr3EsTcuFbclXuFbeoJgtlSZ16aVVr/FspAyo0qrGZHi1BEAxoQY8iKPveYXLDNqLaWLkACSRdzCZ3JhfjUuweZY3mMcWxF+w5tXxlcdTuORBG4MVT+K4pnuNJkcvSrp/Edu+W3dEzO/k8mPiPn0Iqk4q2oRT+IEqfgGB+dCADtB7CTtMjrcjak1yio7NYj7P9pKhbRjJmMM8mPAu598SNpqLYwCkqrOFZoMQNJ2klgAY1gnmKkjJzg8RkZTvIj0lpn5VovHL4Kk1V27G3soOW5AgEhbZjUxp3s6z8qsmP4ZedAVTQrMlk57TDnQwYO2m9Q2rk5EmrfAIMr2IYtkTTLlT3eBSam2rNtMsICY3id96D45CLrW7gZMugB0nLCg+kCZo9bsnu0AA0AqnaCs1/8AjunRi5dQTnOe/wCWPElfzI+VKon2ZPP40qg4nWbD7CUggjcU5abX5/DWjmLtoRrExz5UHxljIJ5Munv/ANJrvdRX6aMVOeJ5gDmd20ATUCST9TrUW8/4QPhUjh+Fa8wTUaEzWgcX7I2MHZR7Ru3LwyrcZlGSTGaNJXcEa6gjeuaLgcSwFLDjxM3tW2turOjQDO0fUVo3AuMXsVbt4ezlNxEUF3ZiCikWwwU6AqMkz1nSapnEGYuI1zchJ9NBrRywxs2CHfKzLFw5RIQkRZUxAmMzT+UDlJay7uII5VoLx6hLty2zC4pgBhrIBOYg7BhB586d4Q5dsuraggEax5/vnQ7iWPD6KgAmdhLebHmdB+9aM9mrV0FbhQwV8BI9oaCQfLSo7xtQmQ6hh6ZJlq412BdUZ3xDNcAkhUAGbQ7GenlWas1xCQwMqdTGxJ5nkdOfStZvYiylpsQr3XIASXuNq4UBoVjsTy26VRruJN1XWGJcxlWASS3WDB21jafKErYnvLbohQFZo/ZHF3LuGssCcw8JTQ5p1twDoo1JLSICbiq//FDgJhcWpaD4bgBHigEK+WfZzeEzqATNddl7zYUhCDkKlGJ3GbWdQQdQCfX3VpPeWbyR4TbYZDnGaZEZdfa5jnsZpq5U8/wSvTkrtYdvp4mG4e+kG2UdQ4tn8LAaZjBYCMqlwDB0MDqQRvEshLHdAQfJtz/l9aufbPsocLN22gawZA8Rm3poHZSQBJBB9x6mvYPgwBw/eAKbrqxLNAFpjoddJIDv6ZT62AQRmOxgy1drMOpsADaQZB5mOuuwAqt9leD2rzm5iLiW8MjSxZguYja2pJkkjcDUAcpFHu2eCe0khrRkGCqsDB2M5mB11mQuugFVbC8Av3balAqqR4c8AkfmXQkAmek+dNQeYjD4szR8Wbl+7nt2bNzC2fBGcCCp9rLDCVBIAYD2W1g61vj/AAXDuGKW+7uDUjQLHuPhGgjcEHwk7072e7U/Zps37Sp3cIL1owQYCgEH2hAkiIkExNHeJob6gtEKBlu2YYeLUMN3SVgwCRrqWFPiyjYXiV/D2wbil7ZlQQwLIFIUgkqQVkgQZEjTlU2z2pUOfuyREsVuzljdlAUSJOsGSNCNNI/ae0zJhrchibVxwymAfvbhB0BDShG281VMPee2cw58iJBAIJUjmJAkURJY24jnI7xbboxMBFO4IEIzt4ZkSNNxvRX+YLlkA7mQRDDqGHIg8vOuMJdR0AFpEbMpITRSyyQY3BDlh0Gkb6N3LeyqUEySACMss3lqef8AiqnqCrHHkTpui121KX/6t8uSfEnwp1zb+VKhX2UfmFKqm1feb/qW/d/eVe/eLt0rxs2it69aNY7htm0CCxd+ZGgB8hUTh2GAkkwDzOvwrea+xicnvPOMCEuCX8lsmBmmAecdPjVz7TYvF37K4iyirbdS7EMWOcKyO2UgABQDv1G9AeCWrNyzeAE4gm2lsk6DMWzPH4iApOug99HeJ4graS2WPd21AVIAGg3IA8R8zJqqy5I+Rk1bbQfmJSrOa0y3YYvmeQQdgrZPVSYM+UVB4heuF8jsW1EyTHqRygGtG4qExeHCkE3ERMsiJAVdVHMa6+fSs84gTmZGEOBEEmCIAIWdRPw9KK33ZzEasr3OYf7jADDIrmbmWHbuzmkHTujoCQsHUsG122p3iGM7u4Q924y22VV8EKFgeFFFzKpKwYgGPSnezOItG2Ll8LeY6sLgV8mUAKArDKJULoTy9BU3iBGNBSzcCsWtko6BbQM5FPhiGg5ZCkwBtGqMwY7SIjVZQ58+IF4zcV1a4twnQBkKANnDQqoQTmVgQZkweWsCdwHAjCW1xF8TcOq2swWAd2g6k65dBu0SJqT2js4r7UbndrZEhLTN47dsARKEeAMDmygxA1yyZCwHCRea4+e45BBLvLs+TUZRppmzGBoMoPIU4KAABEXKjb7cQbdx7Fmd3cELMwSBJIPhggLsJ0MnblUXhvHxYm3cbvrGjBCCpBGug3HLy9N6n2sVbw11y2gYRBWTIM+Irodp3nyFP3+0Ni5oxQjfxSkxy1Gs+tDHjtAQjxXt9ltWrWGKsLhOdyk5Vn2PFPjIknNOnWZpm5hcPZuWcWpe+c3sSuTNkyg6CQQIjplG0UEw+ELMxW1bViQytEFR1BjeSK6x2FvZQzOGcyrKDAZc0yZ/HMnNoahNig4zL1eiudSwUmWLFvZxGIDhS9tAbuXTLc0GXNyMsykzyqOmLuvcfMwzyICiBBAgAeRkV52S/wCFc/ExYW951USxLchLL1260FuPfbEqll4ZIe44AIWDIUA77DQ7ketTqMCUXyDgx7tDwNHxNwszZQ7abbeE7c5Hyq0dnezwfB27iuyMlx4KH/8AmNDbIIIK5gzRuJMRJoZccwxZAJkk7kk8/WTVy7IY22+HFlNHtCG885LyY5GTpuJn8VK3aCjmY1iuIk307+2kW07kKsgDL4ZGYnUGTPWlg7Adys2ykhjmIUsAwOVSdVuEA7aETHQ3a/2eVsTixdshkdWuW/JlBLZTuDLHePkDVRwfBhma4DmRXZBMEypjXy21gb0yxwq5MsaTTtfcFUZ/1J5wZNxmt+27eIs0qBqSfjOpO3wqPDFbjAEi0VDmRuxIUDXxTBgidqmYjDBrbh86sQMhCyu/izecAQBvPKJoL9h0WDHWf06761VUoy5bvOhuW6q4ppx8I8Y4z5xJfe+vzpVC+zn8zf5q9pmxPeT/AGq/7khByzEtzru/fJETAHKo2KvA7cqcFtCFLOddwBtWiZxh4hvspacNm2JXTT8Jkz8BT/aBbpU/eSKI2CqW7RsqHLpekk+zlCoimTtr/wCVE7NrDXBFw3Q4gvsRtqEVdeW5O3XkxGJG4xKizDJ8yhYPF3ku2FtM5uDRBqZLnRADyOgijXbkIt1VGt1Vm4V2zkSVXyDQNd9aJ4ni9jDo1yxai4fu0cuXCQIJEglWKnYktry8Qqo8JJe6bj6hDnY9WHsj4wfQU0ZJ3EYxJ0zt2nuTG72GKXchDI4AETvG8kHaBRDh13uLmfORAmGJYHWBOwgH360PGKNy+WJnf6VKxpGQzymPWms5DAGV3t2WbccS6YXtIyKToQw8a5i0E7Oo21Gg13A5rBY4l2jXui1q3aRyST3YySRJksoGsRPr56VTByAhzEeEDQZo8Ohggg66U7ewj3LmYmBsN+e5Ak8/OlZ1TuZfp0l1x+BSY7etPiFzghRvtufJdIHXzmusLwJAAzuSQ3sgRIHWZqdhcLlQ7nXT0/tTV7w7mKqPqHJIU8TqNP0fT1orWDLeeYQ+3CJPwoZi8cJmaiXMQIzH2ZI9SIkfMfGhmJvZizKNBqeg5fWm11EnmSanqKVLhMS6cPtO+CuC03dt3uraHMrBc/nmGh89RUvA2bWHskmVUasx1JJ5k/iby9wqVhwuGweHDau9vvMmgMuc0sdkUAqCx005nSqTx3irX7mUbKSoGoA5GB+EeZ8R8hpWggwoE47U2B7WYDuYfvY9blvMjqyyNQY84IJke+KsXFcYuDw2FxaWs7CbTsGyZwwYqrH8oYAgkGOXtTWY/YiPvIllIaY03AEDaJj4Uf7P8Td7bYdyHTOlwq+ohWEk6NCxIYwYDa6ao4yES74Xi9vEoLtmSri5bYHQqxQkBvOWb4aaVQcbjO7YH8Dlj3YAAUzLMY5CdvPpEl+IYR8I9psOyphs+djIczrqx1ZkhdGE5fFO1VbtLhmTFXkXVfaAnQqRKkHY+EDUdKYyBhgyei96nDocEQnicWxhSd9tfnTF9gGMMCBz66b01gw9x4W2WiYVQT5THT9aJWOzV+8xLEIoyjKPvW2gZVTTkdCREVUFXOBOls6iAodjjPjzBH2petKrb/6dN+XFf9tR8s+lKpfQlH+rGZglottqelWDhHZ13IZvZnUnoN+c1I7N8Ha42Zl0B19I5VdO5VFAGsdaravW7DsTvOI1vUNh2J3lY42wsZFtaN4jMA6eEMokaT4dRrC0Os8XvC2Sl0qWkHZp3HMGN+Ub1J7WAlrZX+oaecEfQ0HwVksSp8Ps7+Yj+1WtMw9EFv5zNHpytZUoHJP+5ycV913cTFxWB9AdD8T8TRXB4Md2BOm/vNODhSoM2pBjfkQNfrUm2RHhFRXX7uFnZ9M6VsJa8DPtIKcOUTAgnnJ6zoPhXqcMzSGbSpr+dchyWgbmq/qOfMvP0rR7wzKM/wA8R7D4dF9kSYA115b9BUqxYX2rzi2v9WgPkDvPlXoupbAyjxkQWJ09woHjseFY51Bn8REmOgY6/wBqVF3tzzH6iz0a8VgKO2fb8hCzcYtlstpWuAdFyDyliSRr1Woty6szcKDqB4pPQn9AKG2cUS2TLAO2kRz1FDMaGLHc+fWpxWC2AMTLbVMte4sXPb2H6DvJ3Fe7YEqQIG0TJ6AmT86CFjETpMx8vpT6kwZr2yq5lJ25/H/b41ZQEDExtS4sbcAB+H+pbuJ4G/fW7eBIwyPC3WM96A/dB1n2ztroqDRQOY/+X91lI9hyFJJ2bzPnv8ak4PtYyYa5hLktagG0QBKw4fITpKyNDy8xsGxfGblwZT4U08I1mNiTGvyHlUsoGFeI8QATubRldmf83UL5efw61DwrNbdHtsouAhlOYaGDodY25GPa10mo2HuspR4PMqYG67e0CujRMzV44V2be5YNxifvCP6i5OrdyBo+bSTEADTyY7Be8ciljPeB4UXbqsFKkrcV7Tj/AIZuLJyEwO7LKNDqsxptVb/kj5Sgstcct3QNsMQsbQdZkgkk7dYNXi7Zvyq4cDDlVhnuBQVUmQM8Fs+uuQEwRqIqFiOHW7feNeuYjGPbTM0v3duGDCFZizs0Ztsvu3qJbMnv+XmTtWVHA49zwIT7G9lDYst9oTNdYjQEkBV1AZhE+IkkbaDejnEe0eGwdlnJU5Y8FsDfkDl5z1IrLsBirl1O7Ny6QrFsl18pCNBXRmgxrt5aa07byIl0G4jMcpQIcxVhPizRAaCV0M6n0M+0SBnYnmaPh+2OJZVbwJIByndZE5Tpy2pVln2u7/zbfviff4qVGF9o3Blqwr21JifTl8Kj47FxO1N4xDmzW401I6+Q86burCxcCAneSSR5etc6tW47pg9N6PfrrPg7eSewle4rcFxSIJMyI1OnT3T8aI2eFpZRG8ZJAJnYn3jzNTrOIs2yuWCwBzHQTqNOZ5U7iuLC7IA/flV4vhNo7T0fo/Rxoz8RDH6fhBF/FrsZHTSoP8yggKY16b05xO0x5getB3wpAJLD0Amn1IpHMua3VX1vhRwPPb/MKnE5z4TOvKpHD2yyTlzMSFGpMAScvp+/Kv4HEFJUg6kEeHNqJHskid+ulH7PDcTeBy4a8VkMCEKCQImTAHM6Tyqf0QOJkHqjt8XkTniF4KphiGmADvvpt/ptQ21hrtwhm8II0Yg6gdIG+u9F+DcMCXl78RkkOvteIEwGAHUNuTmy7waL9p8dcJ+7so1tY9tgAJJGlsOrMZU9QMp0pdhU7VEU6lbkFlzHA4wPJlOxqKjiCxOggwSfLQVKtYO+QCbLoBHidcg/zPCkU3ieK4pQAtw255WYtnn7XdgFtjuTtUbD8IvXCXuWrxJO5UgH1dv1qYIMczMfVncdgwPad2+D3bkhDaOUFmi9aMKDqx8cQJ5mneE9nL1+/atBRFxgudWDoonxNnUlfCoJgnlRXs5wu7ZunNbhWt3FLZlIAKyBuCfEqD40zh8IVtu1mRcLEFAyNbyQvhYSc0nMpB0ORD5h+2VTYSeZZuK9jrK3Lltrti1hbbWxbvyLt2/4dVTKdwZERAMaNEiipwa41xbSlXZh4e7Zbk+XhOh569ZmATVns2/FbuveU3MwY2jmbIdVyq5EG3GVsp1ERqRJdfin2aW7tjcuDx3C4B/6bYBLec+H9EYlRxFRdx5M4Th+HwIHfocRfaT3anRQAZ7x5Os75efPQ0Xw/bd3OW2uQgaAagjodJEeceWlV3A3TiL2a3bZhGQ+HNlhg4Zj7IObU+Q50bt9mRmL3jkXQQCJYQJnSBJ5amPOoWTePizmWEsFb/DjEYx/FtfFeEnlaGdiTyB1ExGsn0qBiON9wHU2GVrgICXN2Hs9406gaRymNOZFz4fweyFi2GtDKC1xcveFs2iKSCNQJLNoM2gNRcN2SwgbPfKs5jMS7XCfhlX/AMQPKnVUBDmNv1LWjBme2cYobOcoM9AAPJV2EAaR0FT7SYm/Pc4e65Omlsx11MZQPU1rfDbeDsD7nDqP6soWT5wAKH8d7aYZJQ5J/wCXbTvCfIgeEk/1GJ61NmVQsyf+VYr8lr/uWf8A9KVXr/1DH/Lvf922Plm0pUQwJUb2NePaIBGgBprhmFxGKuC1aUs59wA5knYAf3qxcf7P4fCXEsBbl68VDnNOVQSQMiA6klW9okDz5cWO1iWkuWbNoLdOjOxW0luDlLBVmWHUmAeR51a9NxN+7qQx8HA/b6SJjeyj4ckXmBcAE5JKidhIjxa7RS4XwkXGCm+qiY0R2IPKSoKj41PuYvh9q2Gu3cTi7p3PiCTuxXNlJg6TPTzrq326QZhYt2bSjUG4xk8vHBLud/CDEcjoasjTIw5Mof1W5OF+kkns9aQjMxumY2ge8CZPlMetdnBtMW0W2v4jItyPdG+08pqr8Q4+b7K4YtcEksrFV0mEtpplXUToJjzopiHtp93ib12+6trbQFlU+TAAx/iM1KtdVeMCU7tTfecu2fp+kknHKwzZrFok/d20zG8o5C6FMhzpoPiaK8LwuPuQzW74tARnuZcOJJ0JzQWnbnM0PtdrmsA/Z8Nk/qbJaPvMT8Saj3u2eNuCTiLVuCJy5n3nmCQD9aGdSO0iCn3l7PYPPbd7hV7jMHAe66iRoGML4Wy6TlJ5a1GbsqmdGvYjD2bagh1t3GctJnRmyRzGoOnLes+u8Su3T48VdPXKIHvjX5Gm04erycuIumdJJAOm+08uvSocSTM07E4jhOHtuMPbt3roUsEXLmuMBOp5n3HyrNMf2zv3j4cli3sEsjLp5v7RPmMvpUvg/De7v2nNtLSh1lmbWCdRqx/Sqfaw/iITUSY9J0+VOEbCd3iXNm16kyT7zURsceQOp1/Wmr3CC1tbs+25tx08RRSPLN9a6W4AoZtSQpgHXz22508GJGrmNaTyPpzq6djsP3lkteCuxJADb5T4fhmV5Wdcus+Gs/xJZ3yqsHeP7k/vaj2GxN7L3VssQSTlUgHXUyek9TTScwmluy21yrCKNIAgAeX6VU+0fEoaVLeADfVQWnLm8UqD156xtTvB+E3UcF7vnk1Ya/mbadQdOnpUHtPhri3luoRJTKQxChgCSQ0+EqVYaE8gRSQkWx2nMCVaOgAP/wBxXT9r2XREYeZygfADN8HFBeJ4cWyO7AdG1ADglDvkaCdtp5+tC3vHcKoPmQ3+1LFlgxnaXEtrndJEAoTJHQOSXgmNMxrm9YGHRbl8Zrj6rbBgert7R9J18tJGcJx6W7ne3s1zLqqjbNyLExEcoB+VT8TxtL9wXGwufeJZm+QgfGRSQkT+et+WwPLuU08vZpVP/mbf+zH+Sz/+FKiJNx4hw/D3irXraXCogFhmIG8a0B7Y8MsfY7ipZQBcr5UVVJIIgaRJ12nXQa0WOLUfiHxFNXOJj8x+P6VGODmPPaZlxN8ObJt28ElpsqnO1+33ixB9ksbmvQx51XcO9tCGPd5uZeLugMwoJKz5nrzq3cd7GtiLzXWxR8R2ZCxA5CS2sVHsfw3s/iv3G/6VVPqWqVXxGEZlRvY5JJDKXP4ggSNQToNBty6mrFaxGBvNma9fDNE2lTYx4vED4hMmelWPA9jcFbibLORrLuT/AOIhT76PYfCW1GVLVpF6BRy5wOdIz5igYmfYi/w+yWHc4h2EGHuKoado010qC3axEJ7rB4dOhfPcPvGePlWicTw+GtpcNwWkFxSCVQBiCCDBiTpWL4zD5LjKCGE6NtI5EjkfKmiKe/EsF3tpfjw92v8A0WgtDMZx3EP7V256Zgvyro422tpba20ZtZcqJOswDGg/TlUFsQx2UD0FOjZ2t/MpDjMeTE7a7+fz5bUzbxTqIBjz5+6kbVw7zT2F4azmACescvMnYc96IuYR4dcBwrgH7xbiQJ3llywPUfKrxi+wWHJNzvsinUIsRrzB5+6q7wPsqFdXuOCQQQoM9CJO1Wu6pYbkbAEcoIOmmnptvSRJGt8EsWxCAwBq0Sx57napuF4YttSVhWJ3Jkx0/emlctjMoMNrrMbySDUc4hmkrmaDuqlon6enmaWEIYjFkv8AhgiNAeU6z8P9dID8SsrcEEEqd/EF6mfWR8zXJxPUHflTL4kbaHTefkB7j8aIkHXeAYcTlDE77jT10601hsHZBylBy1Jn5cuvyqXdxIGsfP8Af7NDcVcYmdJJ6/T50sJNdVU6BB5BYiABp8zUdrpBJAJX4e8VHs4mN46+vOD++dd3saPKNaIRz7T6/Gvai9/+4pUQmh/a/Me7T6UvtQ6x5CgrOI3rwXY/1qPEdDpxwHKm14j6fSgvfknYR6V0cSOflS4hDScRnSY+dc3OJcgYnSQP19/woMMUOsfv/evLmLE6fvlRiEb4jwlbvia8/wABUD//AC1mJNxz8B/ap9zESfP0+H96Z79o0B9/7/c0sIzZ7O4cHxF/iBPuC1LHBMMPwt/mNRmuOZ1/f+9NriG2Y7R8qIQiLOGTa2p0/wCr5n30rlxZ+700nKP7aRy+lDFvJ/qf0rlsRJ028p6cvpREl9/h1aOIxigg5bI7xuQBXRB/mg/4TWhcU4neIY2LqwYCD7NdfeBm7wNBEnNIG3XnifZe3ev4i3YtXrto3XCsbTtbOUSzHwnXKmYia13tF2uweGufZzi7thrKgFLVkOIIBUFmsuBCxsRvrSwnWA4lh8LbazaN1VtLk8di4O9vXIKnvGHickgZf6x5VzhL/wBmwQtjvAbNvKv2dHuPcfLrmtmx4SWg6yPFrpVdHb3AFMNcuYhy1rPee13L5rl5lKrLhRbAXNc8pyajLUu12+wrjLZuXmuWkN0Otq81trz5wy3bVsBygYgifD4hGq0Qke92nxa4LC20uOMRdvBL137OSLIYmUZckG4MyyPaJDc6j9tMHbw+Bt4Wxad7jOtr/gtmfITc7wMVWXIGuUMeUwCSUwHbXDqbS3DdkWbl43Pst7Kbzn7xxbyZ8q5212i5E0uF9r7FpbNu/cxV4WVuXHxVzC3QDcOYezkzKFV3G0AZRNEJkv2LEf8Atr5hsv8AwnIDGPAfCIb+nfXzry7wrFgqpwuIQuwRc1lkzM2yhmABJ5e/kK1Th/aa1ZyW0uXItd5cu3LuCvnvr12XdlCjNby5mPinw3QBoJqLd7VYc8SslFxdyzZR3ukpecW7twZUud1cl0AU3BMD/iCJANEIFtfwZxTrme9YRiNvE5B8zETHTSetVjth2RxHDcnfFHt3CQr2ySJAnKwIBBjWNRA36bM+EscQxljEW8TfKYcZhbVHS0XkkMzlQC2oldTCjYTNE/j3xxXu2cKpBNoG5c8mcAIvqEzGP61ohMx+0elKme+Pl8KVESWizfE67c4aD5bg1Jxt+2W+7kA9Tpt0MnfTUmhNvYe/60xduGd/3FJHQmXn8S/HamGv8h8qhDQH0FK3qT++tEJMS8OfT9NP9a5e9r9JPv8A35UPt7+9R866LGRqduv760Qkq5iTrtMfvT0+lNfaj18vj+xXjcz5D61HVfF++tESSLl+R08tf3tTYuGdAdD+xSu6R6frXjNp8aITp2I35Vyzt1EDT9+deI3h+H1FNv18hRCei63JiOU7H101FN5y27k896Vsc/37Vc8h/h+tLCJra+f7/fOrL2awyW071eIjC3HVpXu8xAVpRS2adSFfQQNNyDFYXauWc6a0RJoV/FnObh46C2WMxw7KSFOZVMciddRv1gGov277Qzpe4wAiXAqE2Qe8ELfLQDEd4ijxEglRqRpVE5/vzp4II25CiLLzxHjlwWXdeNC62UN3X2YDOxOq66KQYmRyPSCI4J27xmHuXbyXEd7uTvWuIHLZFyJJEHRdN6qlxRp6fpTAohNJxf8AFviTKRnsW5nxJa1HpndhPuqh4rGM5Z3Yu7GWZjJJmZJO5/fKog2NdLRCPZl/ZFKmKVESf//Z";
+
+      var image1 = document.getElementById('card1');
+      image1.src = "https://www.ibtimes.com.au/sites/au.ibtimes.com/files/styles/v2_article_large/public/2014/09/04/451131-cast-member-and-producer-vin-diesel-poses-at-the-premiere-of-the-new-f.jpg?itok=q2J5V2EG";
+
+      var image2 = document.getElementById('card2');
+      image2.src = "https://i.pinimg.com/originals/07/c7/05/07c7052f81b50b2fa50a3cd141bd6eb6.jpg";
+
+      var image3 = document.getElementById('card3');
+      image3.src = "https://pix.avax.news/avaxnews/1e/08/0000081e_medium.jpeg";
+
+      var image4 = document.getElementById('card4');
+      image4.src = "https://m.media-amazon.com/images/M/MV5BMTkyNDQ3NzAxM15BMl5BanBnXkFtZTgwODIwMTQ0NTE@._V1_UY1200_CR84,0,630,1200_AL_.jpg";
+
+      document.getElementById("MovieReview").innerHTML = "Fast & Furious (also known as The Fast and the Furious and The Fast Saga) is a media franchise centered on a series of action films that are largely concerned with street racing, heists, spies, and family. The franchise also includes short films, a television series, live shows, video games and theme park attractions. It is distributed by Universal Pictures. The first film was released in 2001, which began the original tetralogy of films focused on illegal street racing and culminated in the film Fast & Furious (2009). The series transitioned towards heists and spying with Fast Five (2011) and was followed by four sequels, with the most recent, F9, released in 2021. A tenth and eleventh film are planned to conclude the series, and the main films are collectively known as The Fast Saga. Universal expanded the series to include the spin-off film Fast & Furious Presents: Hobbs & Shaw (2019), while its subsidiary DreamWorks Animation followed this with the animated streaming television series Fast & Furious Spy Racers. Soundtrack albums have been released for all the films, as well as compilation albums containing existing music heard in the films. Two short films that tie into the series have also been released. The series has been commercially successful; Universal's biggest franchise, it is the seventh highest-grossing film series, with a combined gross of over $6 billion.[1] Critical reception for the first four films were mixed to negative until the fifth and later films, which were more mixed to positively received. Outside of the films, Fast & Furious has been the focus of other media, including attractions at Universal Studios Hollywood and Universal Studios Florida, live shows, commercials, many video games and toys. It is considered the vehicle that propelled lead actors Vin Diesel and Paul Walker to stardom.";
+
+      document.getElementById("card-title1").innerHTML = obj.vin.name;
+      document.getElementById("card-text1").innerHTML = "Character: " + obj.vin.character + "\n\n" + "Vin Diesel is an actor. He's not very good at his job... but he tries.";
+
+      document.getElementById("card-title3").innerHTML = "Test";
+
+    }
+
+    function displayFuture() {
+      const text = '{"mike": {"name": "Michael Fox", "character": "Marty McFly"}, "Doc": {"name": "Christopher Lloyd", "character": "Doc Brown"}}'
+      const obj = JSON.parse(text);
+
+      document.getElementById("MovieTitle").innerHTML = "Back to the future";
+      document.getElementById("MovieBlerb").innerHTML = "A movie about time travel in the 80s";
+
+      var image0 = document.getElementById('myposter');
+      image0.src = "https://m.media-amazon.com/images/I/71BPuv+iRbL._AC_SY741_.jpg";
+
+      var image1 = document.getElementById('card1');
+      image1.src = "https://upload.wikimedia.org/wikipedia/en/d/d8/Michael_J._Fox_as_Marty_McFly_in_Back_to_the_Future%2C_1985.jpg";
+
+      var image2 = document.getElementById('card2');
+      image2.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Christopher_Lloyd_2015_%28cropped%29.jpg/640px-Christopher_Lloyd_2015_%28cropped%29.jpg";
+
+      var image3 = document.getElementById('card3');
+      image3.src = "https://akns-images.eonline.com/eol_images/Entire_Site/2019720/rs_600x600-190820081745-600x600-leathompson-gj-8-20-19.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top";
+
+      var image4 = document.getElementById('card4');
+      image4.src = "https://upload.wikimedia.org/wikipedia/commons/8/85/Crispin_Glover_2012_Shankbone.JPG";
+
+      document.getElementById("MovieReview").innerHTML = "I think this is a good movie. I've only seen it a few times, but the inclusion of good music and funny characters make it good. I don't really have much else to say other than yeah, I really do like this movie and that's that I hope you'reno too dissappointed with how short this review is haha. Really, you should probably go check another movie reviewer's reviews on this movie, it's probably way better than mine." ;
+
+      document.getElementById("card-title1").innerHTML = obj.mike.name;
+      document.getElementById("card-text1").innerHTML = "Character: " + obj.mike.character + "\n\n" + "he was good in the 80s. I don't know how I feel about him now.";
+    
+      document.getElementById("card-title2").innerHTML = obj.Doc.name;
+    }
+  </script>
+
+ 
+
+​
+
+
+ <!--- Relevant Files: JSON practice, Bootstraps tutorial on W3 schools, HW 7 and other javascript assignments --->
+
+ <!--- This will be a movies/media reviews website. I will review movies. Based on the movie the user selected, they will
+ be presented with my thoughts on the movie with interesting facts throughout. --->
+
+ <!--- I have no doubt that boot straps will be a big part of this project, it will make everything look nice.
+ The javascript will display the different articles and will call functions that do other things.
+ The JSON will hold the different actors and depending on the selected movie, will display the actors of the appropriate movie. --->
+
+ <!--- Ok, so I put a lot of bootstraps up, and they individually look good, but I need to find a way to rearrange the things how
+ I'd like them to be. For example, the thumbnail and the card should be next to one another, I think that would look nice.--->
+
+ <!--- DOM refers to GetElementById - I needed to do that anyways. ---></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
